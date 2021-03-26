@@ -1,5 +1,5 @@
 import React from "react";
-import Chat from "./components/chat/Chat.jsx";
+import Chat from "./components/Chat.jsx";
 
 export default (props) => (
   <div>
