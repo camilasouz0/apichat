@@ -16,7 +16,6 @@ const SignupSchema = Yup.object().shape({
   email: Yup.string()
   .min(100, 'Qual o seu e-mail?')
   .max(50, 'Too Long!')
-  /* .email('Invalid email') */
   .required('Required'),
 });
 
