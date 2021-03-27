@@ -24,13 +24,6 @@ body{
   overflow:scroll; 
 }
 
-.container-scroll{
-  /* overflow:scroll; 
-  background: maroon; */
-  /* height: 400px; */
-  /* width: 350px; */
-}
-
 .input-color{
     color: rgb(18, 18, 24);
     font-size: 1.2rem;
@@ -46,27 +39,13 @@ body{
     margin-top: 30px;
 }
 
-.balao-fala {
-    height: 140px;
-    width: 263px;
-    margin: 0 auto;
-}
-
-#posicao {
-  position: relative;
-}
-
-#texto {
-  position: absolute;
-  font-size: 15px;
-  left: 40px;
-  top: 38px;
-}
-
 .texto-container{
-  width: 200px;
-  height: 30px;
-  word-wrap: break-word;
+  padding: 10px 10px;
+  border-radius: 0.2rem;
+  background: #FF007A;
+  width: 80%;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
