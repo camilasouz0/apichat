@@ -15,7 +15,7 @@ const SignupSchema = Yup.object().shape({
   date: Yup.date().default(function () {return new Date();})
     .max(100, <div className="texto-container"><label>Qual o seu e-mail?</label></div>)
     .required('Required'),
-  email: Yup.string().email('Invalid email').required('Required')/* .label(['start','pending','closed',]) */
+  email: Yup.string().email('Invalid email').required('Required')
 });
 
 export const ValidationSchemaExample = () => (
@@ -33,22 +33,24 @@ export const ValidationSchemaExample = () => (
         console.log(values);
       }}
     >
-    {({ errors, touched }) => (
+      
+    {({ errors, touched, isValidating}) => (
         <div className="container-background">
           <div className="container-back-form">
             <Form className="container-scroll">
               <Field className="input-color" name="nome" placeholder="Nome e sobrenome"/>
-              {errors.nome && touched.nome ? ( <div>{errors.nome}</div> ) : null}
+
+              {errors.nome && touched.nome ? ( <div>{errors.nome} </div> ) : null}
 
               {errors.nome && touched.nome ? <Field className="input-color" name="cidade" placeholder="Cidade" /> : null}
               
-              { errors.cidade && touched.cidade ? ( <div>{errors.cidade}</div> ) : null}
+              {errors.cidade && touched.cidade ? ( <div>{errors.cidade}</div> ) : null}
 
-              { errors.cidade && touched.cidade ? <Field className="input-color" name="date" type="date" /> : null}
+              {errors.cidade && touched.cidade ? <Field className="input-color" name="date" type="date" /> : null}
               
               {errors.date && touched.date ? <div>{errors.date}</div> : null}
 
-              { errors.date && touched.date ? <Field className="input-color" name="email" type="email" /> : null}
+              {errors.date && touched.date ? <Field className="input-color" name="email" type="email" /> : null}
               
               {errors.email && touched.email ? <div>{errors.email}</div> : null}
 
